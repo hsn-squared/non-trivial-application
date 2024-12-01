@@ -1,0 +1,26 @@
+import numpy as np
+
+# Function to calculate scores based on submissions
+def calculate_scores(submissions):
+    S = sum(submissions)
+    scores = [(50 - S) * x for x in submissions]
+    return S, scores
+
+# Simulating submissions (you + 4 others)
+your_submission = 17  # Adjust this value to test
+others_submissions = [3, 2, 2, 1]  # Example submissions from others
+
+# Combine all submissions
+all_submissions = [your_submission] + others_submissions
+
+# Calculate total S and individual scores
+S, scores = calculate_scores(all_submissions)
+
+# Output results
+S, all_submissions, scores
+
+# Calculate the total team score
+total_team_score = sum(scores)
+
+# Output the total team score
+print(total_team_score)
